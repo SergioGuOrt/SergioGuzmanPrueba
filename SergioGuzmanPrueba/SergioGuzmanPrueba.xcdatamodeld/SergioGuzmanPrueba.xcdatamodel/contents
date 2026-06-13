@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel"
+       documentVersion="1.0"
+       lastSavedToolsVersion="21701"
+       systemVersion="22F82"
+       minimumToolsVersion="Automatic"
+       sourceLanguage="Swift"
+       usedWithCloudKit="false"
+       userDefinedModelVersionIdentifier="">
+
+    <!-- Personajes favoritos guardados localmente -->
+    <entity name="FavoriteCharacter" representedClassName="FavoriteCharacter" syncable="YES">
+        <attribute name="characterId"   attributeType="Integer 32" defaultValueString="0"  usesScalarValueType="YES"/>
+        <attribute name="name"          attributeType="String"      defaultValueString=""/>
+        <attribute name="status"        attributeType="String"      defaultValueString=""/>
+        <attribute name="species"       attributeType="String"      defaultValueString=""/>
+        <attribute name="gender"        attributeType="String"      defaultValueString=""/>
+        <attribute name="imageURL"      attributeType="String"      defaultValueString=""/>
+        <attribute name="locationName"  attributeType="String"      defaultValueString=""/>
+        <attribute name="locationURL"   attributeType="String"      defaultValueString=""/>
+        <attribute name="originName"    attributeType="String"      defaultValueString=""/>
+        <attribute name="originURL"     attributeType="String"      defaultValueString=""/>
+        <attribute name="type"          attributeType="String"      defaultValueString=""/>
+        <attribute name="characterURL"  attributeType="String"      defaultValueString=""/>
+        <attribute name="created"       attributeType="String"      defaultValueString=""/>
+        <attribute name="episodesData"  attributeType="Binary"      optional="YES"/>
+        <attribute name="savedAt"       attributeType="Date"        usesScalarValueType="NO"/>
+    </entity>
+
+    <!-- Episodios marcados como vistos para un personaje -->
+    <entity name="ViewedEpisode" representedClassName="ViewedEpisode" syncable="YES">
+        <attribute name="characterId"   attributeType="Integer 32"  defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="episodeId"     attributeType="Integer 32"  defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="episodeName"   attributeType="String"      defaultValueString=""/>
+        <attribute name="episodeCode"   attributeType="String"      defaultValueString=""/>
+        <attribute name="isViewed"      attributeType="Boolean"     defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="viewedAt"      attributeType="Date"        usesScalarValueType="NO"/>
+    </entity>
+
+    <!-- Caché local de personajes descargados de la API -->
+    <entity name="CachedCharacter" representedClassName="CachedCharacter" syncable="YES">
+        <attribute name="characterId"   attributeType="Integer 32"  defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name"          attributeType="String"      defaultValueString=""/>
+        <attribute name="status"        attributeType="String"      defaultValueString=""/>
+        <attribute name="species"       attributeType="String"      defaultValueString=""/>
+        <attribute name="type"          attributeType="String"      defaultValueString=""/>
+        <attribute name="gender"        attributeType="String"      defaultValueString=""/>
+        <attribute name="imageURL"      attributeType="String"      defaultValueString=""/>
+        <attribute name="originName"    attributeType="String"      defaultValueString=""/>
+        <attribute name="originURL"     attributeType="String"      defaultValueString=""/>
+        <attribute name="locationName"  attributeType="String"      defaultValueString=""/>
+        <attribute name="locationURL"   attributeType="String"      defaultValueString=""/>
+        <attribute name="characterURL"  attributeType="String"      defaultValueString=""/>
+        <attribute name="created"       attributeType="String"      defaultValueString=""/>
+        <attribute name="episodesData"  attributeType="Binary"      optional="YES"/>
+        <attribute name="page"          attributeType="Integer 32"  defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="cachedAt"      attributeType="Date"        usesScalarValueType="NO"/>
+    </entity>
+
+    <elements>
+        <element name="FavoriteCharacter" positionX="-63"  positionY="-18"  width="128" height="269"/>
+        <element name="ViewedEpisode"     positionX="160"  positionY="-18"  width="128" height="149"/>
+        <element name="CachedCharacter"   positionX="380"  positionY="-18"  width="128" height="284"/>
+    </elements>
+</model>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites View Controller-->
+        <scene sceneID="FAV-SC-001">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="FAV-VC-001" customClass="FavoritesViewController" customModule="SergioGuzmanPrueba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FAV-V-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-TV-001">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterTableViewCell" id="FAV-CELL-001" customClass="CharacterTableViewCell" customModule="SergioGuzmanPrueba" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100.33333587646484"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" id="FAV-CELL-CV-001">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100.33333587646484"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-CELL-IMG">
+                                                    <rect key="frame" x="12" y="10" width="80" height="80"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                </imageView>
+                                                <stackView contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-CELL-SV">
+                                                    <rect key="frame" x="104" y="10" width="277" height="77.666666666666671"/>
+                                                    <subviews>
+                                                        <label contentMode="scaleToFill" text="Character Name" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-CELL-NAME">
+                                                            <rect key="frame" x="0.0" y="0.0" width="277" height="20.333333333333332"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label contentMode="scaleToFill" text="Alive" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-CELL-STATUS">
+                                                            <rect key="frame" x="0.0" y="23.333333333333336" width="277" height="17"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label contentMode="scaleToFill" text="Human" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-CELL-SPECIES">
+                                                            <rect key="frame" x="0.0" y="43.333333333333336" width="277" height="17"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label contentMode="scaleToFill" text="Male" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-CELL-GENDER">
+                                                            <rect key="frame" x="0.0" y="63.333333333333336" width="277" height="14.333333333333336"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FAV-CELL-IMG" secondAttribute="bottom" constant="10" id="FAV-C-IMG-B"/>
+                                                <constraint firstItem="FAV-CELL-IMG" firstAttribute="height" constant="80" id="FAV-C-IMG-H"/>
+                                                <constraint firstItem="FAV-CELL-IMG" firstAttribute="leading" secondItem="FAV-CELL-CV-001" secondAttribute="leading" constant="12" id="FAV-C-IMG-L"/>
+                                                <constraint firstItem="FAV-CELL-IMG" firstAttribute="top" secondItem="FAV-CELL-CV-001" secondAttribute="top" constant="10" id="FAV-C-IMG-T"/>
+                                                <constraint firstItem="FAV-CELL-IMG" firstAttribute="width" constant="80" id="FAV-C-IMG-W"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FAV-CELL-SV" secondAttribute="bottom" constant="10" id="FAV-C-SV-B"/>
+                                                <constraint firstItem="FAV-CELL-SV" firstAttribute="leading" secondItem="FAV-CELL-IMG" secondAttribute="trailing" constant="12" id="FAV-C-SV-L"/>
+                                                <constraint firstAttribute="trailing" secondItem="FAV-CELL-SV" secondAttribute="trailing" constant="12" id="FAV-C-SV-R"/>
+                                                <constraint firstItem="FAV-CELL-SV" firstAttribute="top" secondItem="FAV-CELL-CV-001" secondAttribute="top" constant="10" id="FAV-C-SV-T"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="characterImageView" destination="FAV-CELL-IMG" id="FAV-O-CELL-IMG"/>
+                                            <outlet property="genderLabel" destination="FAV-CELL-GENDER" id="FAV-O-CELL-GENDER"/>
+                                            <outlet property="nameLabel" destination="FAV-CELL-NAME" id="FAV-O-CELL-NAME"/>
+                                            <outlet property="speciesLabel" destination="FAV-CELL-SPECIES" id="FAV-O-CELL-SPECIES"/>
+                                            <outlet property="statusLabel" destination="FAV-CELL-STATUS" id="FAV-O-CELL-STATUS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-ES-001">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="heart.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-ES-IMG">
+                                        <rect key="frame" x="146.66666666666666" y="325.66666666666669" width="100" height="80.333333333333314"/>
+                                        <color key="tintColor" systemColor="systemGray3Color"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="No favourites yet." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-ES-LBL">
+                                        <rect key="frame" x="40" y="422" width="313" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="FAV-ES-IMG" firstAttribute="centerX" secondItem="FAV-ES-001" secondAttribute="centerX" id="FAV-ES-IMG-CX"/>
+                                    <constraint firstItem="FAV-ES-IMG" firstAttribute="centerY" secondItem="FAV-ES-001" secondAttribute="centerY" constant="-60" id="FAV-ES-IMG-CY"/>
+                                    <constraint firstItem="FAV-ES-IMG" firstAttribute="height" constant="80" id="FAV-ES-IMG-H"/>
+                                    <constraint firstItem="FAV-ES-IMG" firstAttribute="width" constant="100" id="FAV-ES-IMG-W"/>
+                                    <constraint firstItem="FAV-ES-LBL" firstAttribute="centerX" secondItem="FAV-ES-001" secondAttribute="centerX" id="FAV-ES-LBL-CX"/>
+                                    <constraint firstItem="FAV-ES-LBL" firstAttribute="leading" secondItem="FAV-ES-001" secondAttribute="leading" constant="40" id="FAV-ES-LBL-L"/>
+                                    <constraint firstAttribute="trailing" secondItem="FAV-ES-LBL" secondAttribute="trailing" constant="40" id="FAV-ES-LBL-R"/>
+                                    <constraint firstItem="FAV-ES-LBL" firstAttribute="top" secondItem="FAV-ES-IMG" secondAttribute="bottom" constant="16" id="FAV-ES-LBL-T"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FAV-SA-001"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FAV-ES-001" firstAttribute="bottom" secondItem="FAV-V-001" secondAttribute="bottom" id="FAV-ES-B"/>
+                            <constraint firstItem="FAV-ES-001" firstAttribute="leading" secondItem="FAV-V-001" secondAttribute="leading" id="FAV-ES-L"/>
+                            <constraint firstItem="FAV-ES-001" firstAttribute="trailing" secondItem="FAV-V-001" secondAttribute="trailing" id="FAV-ES-R"/>
+                            <constraint firstItem="FAV-ES-001" firstAttribute="top" secondItem="FAV-V-001" secondAttribute="top" id="FAV-ES-T"/>
+                            <constraint firstItem="FAV-TV-001" firstAttribute="bottom" secondItem="FAV-V-001" secondAttribute="bottom" id="FAV-TV-B"/>
+                            <constraint firstItem="FAV-TV-001" firstAttribute="leading" secondItem="FAV-V-001" secondAttribute="leading" id="FAV-TV-L"/>
+                            <constraint firstItem="FAV-TV-001" firstAttribute="trailing" secondItem="FAV-V-001" secondAttribute="trailing" id="FAV-TV-R"/>
+                            <constraint firstItem="FAV-TV-001" firstAttribute="top" secondItem="FAV-V-001" secondAttribute="top" id="FAV-TV-T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyStateView" destination="FAV-ES-001" id="FAV-O-ES"/>
+                        <outlet property="tableView" destination="FAV-TV-001" id="FAV-O-TV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAV-FR-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart.slash" catalog="system" width="128" height="125"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

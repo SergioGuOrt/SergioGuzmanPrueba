@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="DET-SC-001">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="DET-VC-001" customClass="DetailViewController" customModule="SergioGuzmanPrueba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DET-V-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DET-SV-001">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <stackView contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DET-CST-001">
+                                        <rect key="frame" x="16" y="16" width="361" height="871.66666666666663"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="DET-IMG-001">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="280"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="280" id="DET-IMG-H"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <stackView contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DET-BTN-ROW">
+                                                <rect key="frame" x="0.0" y="296" width="361" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-FAV-BTN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="44"/>
+                                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="DET-FAV-H"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <state key="normal" title="  Favorito">
+                                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="favoriteButtonTapped:" destination="DET-VC-001" eventType="touchUpInside" id="A-FAV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-MAP-BTN">
+                                                        <rect key="frame" x="186.66666666666663" y="0.0" width="174.33333333333337" height="44"/>
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="DET-MAP-H"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <state key="normal" title="Ver en el Mapa">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="mapButtonTapped:" destination="DET-VC-001" eventType="touchUpInside" id="A-MAP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DET-INFO-ST">
+                                                <rect key="frame" x="0.0" y="356" width="361" height="162"/>
+                                                <subviews>
+                                                    <stackView contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DET-ROW-NAME">
+                                                        <rect key="frame" x="16" y="12" width="329" height="18"/>
+                                                        <subviews>
+                                                            <label contentMode="scaleToFill" text="Name" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-NAME-K">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="DET-K-NAME-W"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label contentMode="scaleToFill" text="—" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-NAME-V">
+                                                                <rect key="frame" x="98" y="0.0" width="231" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DET-ROW-STATUS">
+                                                        <rect key="frame" x="16" y="42" width="329" height="18"/>
+                                                        <subviews>
+                                                            <label contentMode="scaleToFill" text="Status" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-STATUS-K">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="DET-K-STATUS-W"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label contentMode="scaleToFill" text="—" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-STATUS-V">
+                                                                <rect key="frame" x="98" y="0.0" width="231" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DET-ROW-SPECIES">
+                                                        <rect key="frame" x="16" y="72" width="329" height="18"/>
+                                                        <subviews>
+                                                            <label contentMode="scaleToFill" text="Species" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-SPECIES-K">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="DET-K-SPECIES-W"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label contentMode="scaleToFill" text="—" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-SPECIES-V">
+                                                                <rect key="frame" x="98" y="0.0" width="231" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DET-ROW-GENDER">
+                                                        <rect key="frame" x="16" y="102" width="329" height="18"/>
+                                                        <subviews>
+                                                            <label contentMode="scaleToFill" text="Gender" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-GENDER-K">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="DET-K-GENDER-W"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label contentMode="scaleToFill" text="—" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-GENDER-V">
+                                                                <rect key="frame" x="98" y="0.0" width="231" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DET-ROW-LOC">
+                                                        <rect key="frame" x="16" y="132" width="329" height="18"/>
+                                                        <subviews>
+                                                            <label contentMode="scaleToFill" text="Location" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-LOC-K">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="DET-K-LOC-W"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label contentMode="scaleToFill" text="—" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="DET-LBL-LOC-V">
+                                                                <rect key="frame" x="98" y="0.0" width="231" height="18"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <edgeInsets key="layoutMargins" top="12" left="16" bottom="12" right="16"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </stackView>
+                                            <label contentMode="scaleToFill" text="Episodios" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DET-EP-HDR">
+                                                <rect key="frame" x="0.0" y="534" width="361" height="21.666666666666629"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <activityIndicatorView hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DET-EP-AI">
+                                                <rect key="frame" x="0.0" y="571" width="361" height="20"/>
+                                            </activityIndicatorView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DET-TV-001">
+                                                <rect key="frame" x="0.0" y="571.66666666666663" width="361" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" placeholder="YES" id="DET-TV-PH-H"/>
+                                                </constraints>
+                                            </tableView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DET-CST-001" secondAttribute="bottom" constant="16" id="DET-CST-B"/>
+                                    <constraint firstItem="DET-CST-001" firstAttribute="leading" secondItem="DET-SV-001" secondAttribute="leading" constant="16" id="DET-CST-L"/>
+                                    <constraint firstAttribute="trailing" secondItem="DET-CST-001" secondAttribute="trailing" constant="16" id="DET-CST-R"/>
+                                    <constraint firstItem="DET-CST-001" firstAttribute="top" secondItem="DET-SV-001" secondAttribute="top" constant="16" id="DET-CST-T"/>
+                                    <constraint firstItem="DET-CST-001" firstAttribute="width" secondItem="DET-SV-001" secondAttribute="width" constant="-32" id="DET-CST-W"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DET-SA-001"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DET-SV-001" firstAttribute="bottom" secondItem="DET-V-001" secondAttribute="bottom" id="DET-SV-B"/>
+                            <constraint firstItem="DET-SV-001" firstAttribute="leading" secondItem="DET-V-001" secondAttribute="leading" id="DET-SV-L"/>
+                            <constraint firstItem="DET-SV-001" firstAttribute="trailing" secondItem="DET-V-001" secondAttribute="trailing" id="DET-SV-R"/>
+                            <constraint firstItem="DET-SV-001" firstAttribute="top" secondItem="DET-V-001" secondAttribute="top" id="DET-SV-T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="characterImageView" destination="DET-IMG-001" id="O-DET-IMG"/>
+                        <outlet property="episodesLoadingIndicator" destination="DET-EP-AI" id="O-DET-AI"/>
+                        <outlet property="episodesTableView" destination="DET-TV-001" id="O-DET-TV"/>
+                        <outlet property="favoriteButton" destination="DET-FAV-BTN" id="O-DET-FAV"/>
+                        <outlet property="genderLabel" destination="DET-LBL-GENDER-V" id="O-DET-GENDER"/>
+                        <outlet property="locationLabel" destination="DET-LBL-LOC-V" id="O-DET-LOC"/>
+                        <outlet property="mapButton" destination="DET-MAP-BTN" id="O-DET-MAP"/>
+                        <outlet property="nameLabel" destination="DET-LBL-NAME-V" id="O-DET-NAME"/>
+                        <outlet property="speciesLabel" destination="DET-LBL-SPECIES-V" id="O-DET-SPECIES"/>
+                        <outlet property="statusLabel" destination="DET-LBL-STATUS-V" id="O-DET-STATUS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DET-FR-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

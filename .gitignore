@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Xcode — User data
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Xcode — Build
+build/
+DerivedData/
+*.moved-aside
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+Pods/
+
+# VSCode
+.vscode/
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# Temporary files
+*.swp
+*~
