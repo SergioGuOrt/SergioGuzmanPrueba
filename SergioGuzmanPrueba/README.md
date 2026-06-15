@@ -86,6 +86,15 @@ La capa de red usa `async/await` nativo de Swift para un call site limpio. `APIC
 
 ## Instalación
 
+This project does not include development certificates or provisioning profiles.
+To run the application on a physical device: 
+1. Open `SergioGuzmanPrueba.xcworkspace`. 
+2. Select the `SergioGuzmanPrueba` target. 
+3. Go to **Signing & Capabilities**. 
+4. Select your own Apple Developer Team. 
+5. Update the Bundle Identifier if necessary. 
+6. Build and run the application. No additional configuration is required to run the project on the iOS Simulator.
+
 ```bash
 git clone https://github.com/tu-usuario/SergioGuzmanPrueba.git
 cd SergioGuzmanPrueba
@@ -191,3 +200,9 @@ SergioGuzmanPrueba/
 ├── Common/               → BaseViewController
 └── Resources/            → Constants, Assets, LaunchScreen
 ```
+
+## Author
+
+**Sergio Guzmán Ortiz**
+
+iOS Developer
